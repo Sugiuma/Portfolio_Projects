@@ -8,21 +8,7 @@ The main goal of this project is to highlight how OOP can enhance code organizat
 - **Tool Inventory Management**: Uses OOP to encapsulate tool properties and availability within a Tool class, keeping inventory organized and easy to update.
 - **Customer Rental Tracking**: The Rental class stores customer rental information, ensuring clear separation of concerns and straightforward rental processing.
 - **Cost Calculation**: Modular calculation methods within classes allow for flexible and accurate rental cost determination based on rental duration and tool type.
-- **Rental History**: Maintains an organized log of all rental transactions, leveraging OOP to store and retrieve rental details
-
-
-## Screenshots
-### Initial Screen
-![Initial Screen](assets/images/usage.png)
-
-### Initial Tool Inventory
-![Initial Tool Inventory](assets/images/stock.png)
-
-### Rental and Return Entry and Cost Calculation
-![Rental and Return Entry and Cost Calculation](assets/images/rent.png)
-
-### Sample Interaction
-![Sample Interaction](assets/images/sample.png)
+- **Rental History**: Maintains an organized log of all rental transactions, leveraging OOP to store and retrieve rental details.
 
 
 ## Code Structure
@@ -68,3 +54,18 @@ class ToolRentalSystem:
     def return_tool(self, tool_name):
         if tool_name in self.inventory:
             self.inventory[tool_name]["is_available"] = True
+
+
+
+## Screenshots
+### Initial Screen
+![Initial Screen](assets/images/usage.png)
+
+### Initial Tool Inventory
+![Initial Tool Inventory](assets/images/stock.png)
+
+### Rental and Return Entry and Cost Calculation
+![Rental and Return Entry and Cost Calculation](assets/images/rent.png)
+
+### Sample Interaction
+![Sample Interaction](assets/images/sample.png)
