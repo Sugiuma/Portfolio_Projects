@@ -28,19 +28,6 @@ request_tool: Gathers rental tool type and quantity from the customer.
 choose_rental_basis: Allows the customer to choose the rental basis.
 return_tool: Facilitates the return process.
 
-## Screenshots
-### Initial Screen
-![Initial Screen](assets/images/usage.png)
-
-### Initial Tool Inventory
-![Initial Tool Inventory](assets/images/stock.png)
-
-### Rental and Return Entry and Cost Calculation
-![Rental and Return Entry and Cost Calculation](assets/images/rent.png)
-
-### Sample Interaction
-![Sample Interaction](assets/images/sample.png)
-
 ## Code Snippets
 ## Initialization and Main Functionalities
 ```python
@@ -67,7 +54,20 @@ class ToolRentalSystem:
     def return_tool(self, tool_name):
         if tool_name in self.inventory:
             self.inventory[tool_name]["is_available"] = True
+```
 
+## Screenshots
+### Initial Screen
+![Initial Screen](assets/images/usage.png)
+
+### Initial Tool Inventory
+![Initial Tool Inventory](assets/images/stock.png)
+
+### Rental and Return Entry and Cost Calculation
+![Rental and Return Entry and Cost Calculation](assets/images/rent.png)
+
+### Sample Interaction
+![Sample Interaction](assets/images/sample.png)
 
 
 
