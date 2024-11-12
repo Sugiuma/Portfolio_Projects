@@ -22,7 +22,7 @@ Rental: A base class for managing tool stock.
 ToolRental: Inherits from Rental, handles tool rental operations (hourly, daily, weekly).
 Customer: Manages customer interactions and rental requests.
 File Structure
-bash
+plaintext
 Copy code
 .
 ├── rental_oop.py      # Contains the Rental, ToolRental, and Customer classes
