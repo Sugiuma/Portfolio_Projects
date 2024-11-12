@@ -1,12 +1,15 @@
 ## Tool Rental System
-The Tool Rental System is a Python-based application designed to facilitate the management of tool rentals for businesses. This project provides a straightforward interface to manage tool inventory, track customer rentals, and calculate rental costs, making it ideal for small rental businesses. It is built with a focus on functionality and ease of use.
+A Python-based tool rental system that enables customers to rent tools on an hourly, daily, or weekly basis, manage inventory, and calculate rental fees. Built with object-oriented programming principles, this project includes features for tracking rentals, handling returns, and calculating bills based on rental duration. It demonstrates the power of OOP principles, such as encapsulation, inheritance, and modular design, to create a scalable and maintainable codebase.
+
+## Purpose
+The main goal of this project is to highlight how OOP can enhance code organization, reusability, and extensibility in real-world applications. By using classes and objects, the Tool Rental System maintains clean code, efficiently manages tool inventories, and simplifies complex processes such as rental tracking and cost calculation.
 
 ## Features
-- **Tool Inventory Management**: Keeps track of available tools, tool types, and rental statuses.
-- **Customer Rental Tracking**: Allows users to rent tools by providing customer details and rental dates.
-- **Dynamic Cost Calculation**: Calculates rental costs based on rental duration, applying daily rates for each tool type.
-- **Rental History**: Maintains a history of rentals to facilitate tracking and ensure return deadlines are met.
-- **Return Handling**: Updates tool availability when tools are returned, updating inventory status.
+- **Tool Inventory Management**: Uses OOP to encapsulate tool properties and availability within a Tool class, keeping inventory organized and easy to update.
+- **Customer Rental Tracking**: The Rental class stores customer rental information, ensuring clear separation of concerns and straightforward rental processing.
+- **Cost Calculation**: Modular calculation methods within classes allow for flexible and accurate rental cost determination based on rental duration and tool type.
+- **Rental History**: Maintains an organized log of all rental transactions, leveraging OOP to store and retrieve rental details
+
 
 ## Screenshots
 ### Initial Tool Inventory
@@ -25,6 +28,16 @@ The Tool Rental System is a Python-based application designed to facilitate the 
 - **Rental Processing**: Records customer rentals, calculates rental fees based on duration, and updates tool status.
 - **Cost Calculation and Rental History**: Tracks total cost for each rental and maintains a log of all transactions for easy access.
 
+## Classes and Methods
+- **Rental Class**: Manages tool stock display.
+display_stock: Shows available tools and quantities in stock.
+- **ToolRental Class**: Handles rental operations (hourly, daily, weekly) and billing.
+rent_tool(tool, n, basis): Rents a specified quantity of tools on the chosen basis (hourly, daily, weekly).
+return_tool(tool, rental_time, rental_basis, n): Calculates the bill based on rental duration and replenishes stock.
+- **Customer Class**: Manages customer actions.
+request_tool: Gathers rental tool type and quantity from the customer.
+choose_rental_basis: Allows the customer to choose the rental basis.
+return_tool: Facilitates the return process.
 
 ## Code Snippets
 ## Initialization and Main Functionalities
