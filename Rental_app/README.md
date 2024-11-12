@@ -28,7 +28,7 @@ The Tool Rental System is a Python-based application designed to facilitate the 
 
 ## Code Snippets
 ## Initialization and Main Functionalities
-
+```python
 class ToolRentalSystem:
     def __init__(self):
         self.inventory = {}
