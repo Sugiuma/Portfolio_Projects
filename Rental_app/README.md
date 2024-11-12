@@ -1,5 +1,5 @@
 Tool Rental System
-A Python-based tool rental system that enables customers to rent tools on an hourly, daily, or weekly basis, manage inventory, and calculate rental fees. Built with object-oriented programming principles, the project includes features for tracking rentals, handling returns, and calculating bills based on rental duration.
+A Python-based tool rental system that enables customers to rent tools on an hourly, daily, or weekly basis, manage inventory, and calculate rental fees. Built with object-oriented programming principles, this project includes features for tracking rentals, handling returns, and calculating bills based on rental duration.
 
 Table of Contents
 Features
@@ -9,15 +9,16 @@ Getting Started
 Usage
 Code Snippets
 Example
+License
 Features
 Display Inventory: Shows available tools and quantities in stock.
 Rental Options: Allows customers to rent tools on an hourly, daily, or weekly basis.
-Return and Billing: Calculates rental cost based on the tool type, quantity, and rental duration.
+Return and Billing: Calculates rental cost based on tool type, quantity, and rental duration.
 Error Handling: Validates rental requests, ensuring enough stock and valid rental basis inputs.
 Project Structure
-The project includes three main classes in rental_oop.py:
+The project is organized into three main classes in rental_oop.py:
 
-Rental: A base class to manage tool stock.
+Rental: A base class for managing tool stock.
 ToolRental: Inherits from Rental, handles tool rental operations (hourly, daily, weekly).
 Customer: Manages customer interactions and rental requests.
 File Structure
@@ -31,46 +32,40 @@ Copy code
 Classes and Methods
 Rental Class
 Manages tool stock display.
-
 display_stock: Shows available tools and quantities in stock.
 ToolRental Class
 Handles rental operations (hourly, daily, weekly) and billing.
-
 rent_tool(tool, n, basis): Rents a specified quantity of tools on the chosen basis (hourly, daily, weekly).
 return_tool(tool, rental_time, rental_basis, n): Calculates the bill based on rental duration and replenishes stock.
 Customer Class
 Manages customer actions.
-
 request_tool: Gathers rental tool type and quantity from the customer.
-choose_rental_basis: Allows customer to choose the rental basis.
+choose_rental_basis: Allows the customer to choose the rental basis.
 return_tool: Facilitates the return process.
 Getting Started
-Clone the repository:
-
+Clone the Repository
 bash
 Copy code
 git clone https://github.com/yourusername/tool-rental-system.git
 cd tool-rental-system
-Run the main application:
-
+Run the Main Application
 bash
 Copy code
 python main.py
-Run unit tests:
-
+Run Unit Tests
 bash
 Copy code
 python -m unittest tests.py
 Usage
-Upon running main.py, the system prompts the user with options to display stock, rent tools, return tools, and exit.
+When you run main.py, the system provides options for displaying stock, renting tools, returning tools, and exiting.
 
 plaintext
 Copy code
 ====== Tool Rental Shop =======
 1. Display available tools
-2. Rent a tool on hourly basis
-3. Rent a tool on daily basis
-4. Rent a tool on weekly basis
+2. Rent a tool on an hourly basis
+3. Rent a tool on a daily basis
+4. Rent a tool on a weekly basis
 5. Return a tool
 6. Exit
 Code Snippets
@@ -92,7 +87,7 @@ python
 Copy code
 rental_time = shop.rent_tool("drill", 2, "hourly")
 # Output:
-# You have rented 2 drill(s) on hourly basis at 14 hours.
+# You have rented 2 drill(s) on an hourly basis at 14 hours.
 # You will be charged $4 per hourly per tool.
 Returning a Tool
 python
@@ -102,7 +97,7 @@ bill = shop.return_tool("drill", rental_time, "hourly", 2)
 print(f"Total bill: ${bill:.2f}")
 # Output: Total bill: $8.00
 Example
-Here's a sample interaction for renting and returning tools in the system.
+Here’s a sample interaction for renting and returning tools in the system:
 
 python
 Copy code
@@ -125,4 +120,3 @@ print(f"Total bill for returning tools: ${bill:.2f}")
 License
 This project is open-source and available under the MIT License.
 
-This README gives a structured overview of your tool rental system, making it easy to understand and visually accessible for portfolio or repository documentation.
