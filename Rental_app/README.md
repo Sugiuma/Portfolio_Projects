@@ -7,18 +7,25 @@ Customer Rental Tracking: Allows users to rent tools by providing customer detai
 Dynamic Cost Calculation: Calculates rental costs based on rental duration, applying daily rates for each tool type.
 Rental History: Maintains a history of rentals to facilitate tracking and ensure return deadlines are met.
 Return Handling: Updates tool availability when tools are returned, updating inventory status.
-Screenshots
-Initial Tool Inventory
 
-Rental Entry and Cost Calculation
+## Screenshots
+### Initial Tool Inventory
+![Initial Tool Inventory](assets/images/initial_prompt.png)
 
-Rental History and Return Handling
+### Rental Entry and Cost Calculation
+![Rental Entry and Cost Calculation](assets/images/problem_display.png)
+
+### Rental History and Return Handling
+![Rental History and Return Handling](assets/images/final_score.png)
+
 
 Code Structure
 ToolRentalSystem: The main class for the application, handling tool inventory, rental management, and cost calculation.
 Inventory Management: Adds tools to the inventory and tracks their availability status.
 Rental Processing: Records customer rentals, calculates rental fees based on duration, and updates tool status.
 Cost Calculation and Rental History: Tracks total cost for each rental and maintains a log of all transactions for easy access.
+
+
 Code Snippets
 Initialization and Main Functionalities
 python
