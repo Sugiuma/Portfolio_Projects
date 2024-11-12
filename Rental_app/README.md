@@ -12,14 +12,17 @@ The main goal of this project is to highlight how OOP can enhance code organizat
 
 
 ## Screenshots
+### Initial Screen
+![Initial Screen](assets/images/usage.png)
+
 ### Initial Tool Inventory
-![Initial Tool Inventory](assets/images/initial_prompt.png)
+![Initial Tool Inventory](assets/images/stock.png)
 
-### Rental Entry and Cost Calculation
-![Rental Entry and Cost Calculation](assets/images/problem_display.png)
+### Rental and Return Entry and Cost Calculation
+![Rental and Return Entry and Cost Calculation](assets/images/rent.png)
 
-### Rental History and Return Handling
-![Rental History and Return Handling](assets/images/final_score.png)
+### Sample Interaction
+![Sample Interaction](assets/images/sample.png)
 
 
 ## Code Structure
