@@ -22,7 +22,7 @@ Rental: A base class for managing tool stock.
 ToolRental: Inherits from Rental, handles tool rental operations (hourly, daily, weekly).
 Customer: Manages customer interactions and rental requests.
 File Structure
-plaintext
+bash
 Copy code
 .
 ├── rental_oop.py      # Contains the Rental, ToolRental, and Customer classes
@@ -88,7 +88,7 @@ Copy code
 rental_time = shop.rent_tool("drill", 2, "hourly")
 # Output:
 # You have rented 2 drill(s) on an hourly basis at 14 hours.
-# You will be charged $4 per hourly per tool.
+# You will be charged $4 per hour per tool.
 Returning a Tool
 python
 Copy code
@@ -119,4 +119,3 @@ bill = shop.return_tool("drill", customer.rental_time, customer.rental_basis, 2)
 print(f"Total bill for returning tools: ${bill:.2f}")
 License
 This project is open-source and available under the MIT License.
-
