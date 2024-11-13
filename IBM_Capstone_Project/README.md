@@ -25,5 +25,18 @@ This data analysis project identifies the top in-demand programming skills of th
 - **Libraries**: pandas, BeautifulSoup, requests, matplotlib
 - **Data Storage**: .csv, Excel, SQL databases
 
+## Dashboard Screenshots
+### Current Trend
+![Current Trend](assets/images/dash1.png)
+
+### Future Trend
+![Future Trend](assets/images/dash2.png)
+
+### Demographics
+![Demographics](assets/images/dash3.png)
+
+## Presentation
+[View the Report](report.pdf)
+
 ## Project Outcomes
 This project provides actionable insights into the most sought-after programming skills, supporting both job seekers and educators in aligning their learning paths with industry demand.
