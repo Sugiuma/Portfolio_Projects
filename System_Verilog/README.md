@@ -7,4 +7,7 @@
 | ![SystemVerilog Snippet](agent.png) | **Abstraction**: The agent class serves as an abstraction layer, combining the generator, driver, and monitor. It coordinates their interaction and abstracts away the complexities of managing these components individually. |
 | ![SystemVerilog Snippet](scoreboard.png) | **Modularity and Responsibility**: The scoreboard class is responsible for comparing the DUT’s outputs with the expected results, maintaining the principle of single responsibility for testing and verification. |
 | ![SystemVerilog Snippet](env.png) | **Constructor Usage**: The env class serves as the environment for the entire testbench, coordinating the generator, driver, monitor, and scoreboard. Its constructor initializes all necessary components. |
-| ![SystemVerilog Snippet](concurrency.png) | **Concurrency**: The testbench leverages the `fork` and `join_any` constructs to run multiple tasks concurrently (generator, driver, and monitor), enabling parallelism in the verification process. |
+| ![SystemVerilog Snippet](tb.png) | **Concurrency**: The testbench leverages the `fork` and `join_any` constructs to run multiple tasks concurrently (generator, driver, and monitor), enabling parallelism in the verification process. |
+
+## Summary
+The testbench utilizes OOP principles primarily through encapsulation, modularity, and abstraction, creating a reusable and organized structure that enhances maintainability and scalability. These concepts simplify managing a complex verification environment by dividing responsibilities among classes, using tasks and functions to encapsulate operations, and making the testbench flexible for potential extensions or refinements.
