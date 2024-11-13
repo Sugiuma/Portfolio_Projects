@@ -1,7 +1,7 @@
 # E-Commerce Web Application
 
 ## Overview
-This project is a fully functional e-commerce web application built with Flask, SQLAlchemy, and Bootstrap, providing a responsive and dynamic user interface. It features an intuitive product catalog, secure user authentication, an interactive shopping cart, and an admin panel for managing products and orders.
+This project is a simple e-commerce web application built with Flask, SQLAlchemy, and Bootstrap, providing a responsive and dynamic user interface. It features an intuitive product catalog, secure user authentication, an interactive shopping cart, and an admin panel for managing products and orders.
 
 ## Key Features & Flask Components
 
@@ -56,6 +56,106 @@ This project is a fully functional e-commerce web application built with Flask, 
 - **Werkzeug** for secure password handling
 - **Bootstrap** for frontend styling
 - **Flask-SQLAlchemy** for managing database models
+
+
+To provide an overview of key parts of the e-commerce application, here are a few essential code snippets that demonstrate critical features like product management, user authentication, shopping cart handling, and the admin dashboard.
+
+
+# 1. User Authentication (login route)
+```python
+from flask import Flask, render_template, redirect, url_for, flash, session
+from werkzeug.security import check_password_hash
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = User.query.filter_by(username=username).first()
+
+        if user and check_password_hash(user.password, password):
+            session['user_id'] = user.id
+            session['is_admin'] = user.is_admin
+            flash("Login successful!", "success")
+            return redirect(url_for('admin_dashboard') if user.is_admin else url_for('catalog'))
+        else:
+            flash("Invalid username or password", "danger")
+    return render_template('login.html')
+
+# 2. Admin Product Management (Add, Edit, Delete Product)
+@app.route('/admin/add_product', methods=['GET', 'POST'])
+@admin_required  # Custom decorator to restrict access to admins
+def add_product():
+    if request.method == 'POST':
+        name = request.form['name']
+        price = float(request.form['price'])
+        description = request.form['description']
+        image = request.files['image']
+        
+        # Save image and add product to the database
+        if image:
+            image_path = save_image(image)
+            new_product = Product(name=name, price=price, description=description, image_path=image_path)
+            db.session.add(new_product)
+            db.session.commit()
+            flash('Product added successfully!', 'success')
+            return redirect(url_for('admin_dashboard'))
+    return render_template('admin/add_product.html')
+
+# 3. Shopping Cart Management
+@app.route('/add_to_cart/<int:product_id>', methods=['POST'])
+@login_required
+def add_to_cart(product_id):
+    quantity = int(request.form['quantity'])
+    cart = session.get('cart', {})
+    cart[product_id] = cart.get(product_id, 0) + quantity
+    session['cart'] = cart
+    flash("Product added to cart!", "success")
+    return redirect(url_for('cart'))
+
+@app.route('/cart')
+def cart():
+    cart = session.get('cart', {})
+    products = Product.query.filter(Product.id.in_(cart.keys())).all()
+    total = sum(product.price * quantity for product, quantity in zip(products, cart.values()))
+    return render_template('cart.html', products=products, total=total)
+
+# 4. Checkout and Order Processing
+@app.route('/checkout', methods=['GET', 'POST'])
+@login_required
+def checkout():
+    if request.method == 'POST':
+        cart = session.get('cart', {})
+        order = Order(user_id=session['user_id'])
+        
+        for product_id, quantity in cart.items():
+            product = Product.query.get(product_id)
+            order_item = OrderItem(order=order, product=product, quantity=quantity)
+            db.session.add(order_item)
+        
+        db.session.add(order)
+        db.session.commit()
+        
+        # Clear the cart after order submission
+        session.pop('cart', None)
+        flash("Order placed successfully!", "success")
+        return redirect(url_for('catalog'))
+    return render_template('checkout.html')
+
+# 5. Admin Dashboard with Product Management Links
+@app.route('/admin_dashboard')
+@admin_required
+def admin_dashboard():
+    products = Product.query.all()
+    orders = Order.query.all()
+    return render_template('admin/dashboard.html', products=products, orders=orders)
+```
+## Explanation of Key Components
+- **User Authentication**: Uses session management to track login states, with password security handled by Werkzeug’s hashing functions.
+- **Admin Product Management**: Allows the admin to add, edit, and delete products via custom routes, with role-restricted access controlled by a custom @admin_required decorator.
+- **Shopping Cart Management**: Manages the cart contents within the session, ensuring that products and quantities persist as users navigate.
+- **Checkout and Order Processing**: Creates an order record with associated items in the database and clears the cart session upon successful order placement.
+- **Admin Dashboard**: Displays product and order details with links for admins to edit or delete products, providing a central control hub for management tasks.
 
 ## Demonstration and Access
 The application can be hosted on a live server (e.g., **Heroku**, **AWS**, or local deployment), where users can register, log in, browse products, manage the shopping cart, and complete purchases.
