@@ -1,3 +1,4 @@
+```systemverilog
 interface add_if(input logic clk, reset);
   logic [7:0] ip1, ip2;
   logic [8:0] out;
@@ -129,3 +130,15 @@ module tb_top;
     $dumpvars(0);
   end
 endmodule
+```
+## Key Elements in the Skeleton:
+Interface (add_if): Defines signals used in the testbench.
+Transaction Class: Handles the generation of randomized transaction data.
+Generator Class: Responsible for generating transactions and sending them to the driver.
+Driver Class: Drives the input signals to the DUT (Device Under Test).
+Monitor Class: Monitors the signals and collects data for comparison.
+Agent Class: Combines the driver, monitor, and generator for a full verification environment.
+Scoreboard Class: Compares the DUT's outputs with expected results.
+Env Class: Integrates the components and runs the verification.
+Base Test Program: Initializes the environment and runs the test.
+Top Module: Includes the DUT, test components, and clock/reset logic.
