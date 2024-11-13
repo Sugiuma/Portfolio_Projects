@@ -1,0 +1,84 @@
+<table border="1" cellpadding="10">
+  <tr>
+    <th>SystemVerilog Code Snippet</th>
+    <th>OOP Implementation Explanation</th>
+  </tr>
+  <tr>
+    <td>
+      <pre><code>
+interface add_if(input logic clk, reset);
+  logic [7:0] ip1, ip2;
+  logic [8:0] out;
+endinterface
+
+class transaction;
+  rand bit [7:0] ip1, ip2;
+  bit [8:0] out;
+  constraint ip_c {ip1 < 100; ip2 < 100;}
+endclass
+      </code></pre>
+    </td>
+    <td>
+      <strong>Encapsulation</strong>:  
+      The <code>add_if</code> interface encapsulates signals <code>ip1</code>, <code>ip2</code>, and <code>out</code>, along with <code>clk</code> and <code>reset</code>, simplifying DUT connections by grouping related signals. The <code>transaction</code> class encapsulates inputs and outputs, with constraints for randomization that enable constrained random testing and data hiding within the class.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre><code>
+class generator;
+  int count;
+  mailbox gen_to_drv;
+  transaction tr;
+  
+  function new(mailbox gen_to_drv);
+    this.gen_to_drv = gen_to_drv;
+  endfunction
+  
+  task run;
+    repeat(count) begin
+      tr = new();
+      void'(tr.randomize());
+      gen_to_drv.put(tr);
+    end
+  endtask
+endclass
+      </code></pre>
+    </td>
+    <td>
+      <strong>Abstraction & Constructor Usage</strong>:  
+      The <code>generator</code> class abstracts transaction creation with the <code>run</code> task for repeated generation. The constructor initializes the mailbox for inter-class communication, encapsulating behavior within the class.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre><code>
+class driver;
+  virtual add_if vif;
+  mailbox gen_to_drv;
+  transaction tr;
+  
+  function new(mailbox gen_to_drv, virtual add_if vif);
+    this.gen_to_drv = gen_to_drv;
+    this.vif = vif;
+  endfunction
+  
+  task run;
+    forever begin
+      @(posedge vif.clk);
+      gen_to_drv.get(tr);
+      vif.ip1 <= tr.ip1;
+      vif.ip2 <= tr.ip2;
+      @(posedge vif.clk);
+      tr.out <= vif.out;
+    end
+  endtask
+endclass
+      </code></pre>
+    </td>
+    <td>
+      <strong>Abstraction & Constructor Usage</strong>:  
+      The <code>driver</code> class abstracts signal driving, using <code>run</code> to handle continuous stimulus to the DUT. The <code>new</code> constructor links <code>vif</code> and <code>gen_to_drv</code> mailbox, enabling modular driver behavior.
+    </td>
+  </tr>
+</table>
