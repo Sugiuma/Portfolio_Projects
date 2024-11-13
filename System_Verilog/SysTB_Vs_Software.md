@@ -1,0 +1,13 @@
+| **SystemVerilog Testbench Development**                         | **Software Development**                                  | **Explanation of Transferable Skills**                               |
+|------------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------|
+| **Define the Requirements and Test Plan**                       | **Understand application features and create test cases**  | Both involve understanding the system's purpose and outlining the verification strategy. |
+| **Create Classes for Testbench Components**                      | **Define classes for entities and functionalities**       | Object-oriented design in both contexts, structuring components/entities logically. |
+| **Define Testbenches with Inheritance and Polymorphism**         | **Use inheritance and polymorphism for scalable code**    | In both, inheritance and polymorphism enable code reuse and flexibility. |
+| **Create Stimulus and Generate Test Scenarios**                  | **Write unit tests and create test scenarios**            | Test scenarios are written in both to simulate various use cases and edge conditions. |
+| **Develop Monitors and Checkers**                                | **Implement assertions or checks for expected behaviors** | In both, checks ensure that the outputs or behaviors align with expected results. |
+| **Write Test Scripts to Run the Testbench**                       | **Write a main function or script to start tests**        | Both require orchestrating the testing process by running the appropriate test cases. |
+| **Run Simulation and Debug Failures**                            | **Test the software, debug failures, and fix issues**     | Debugging in both environments involves analyzing failures and resolving issues. |
+| **Coverage Collection and Analysis**                             | **Use code coverage tools to ensure all code paths are tested** | Both rely on coverage metrics to ensure thorough testing. |
+| **Refactor Testbench for Reusability and Scalability**           | **Refactor the codebase for better readability**          | Refactoring is essential in both to improve modularity, reusability, and maintainability. |
+| **Generate Reports and Documentation**                           | **Generate logs and reports, documenting test results**   | Both processes involve documenting results to provide insights and traceability. |
+| **Regression Testing**                                           | **Implement continuous integration (CI)**                 | Both utilize automation tools to ensure no new changes break existing functionality. |
