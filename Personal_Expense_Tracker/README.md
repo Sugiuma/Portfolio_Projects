@@ -96,4 +96,4 @@ plt.show()
 ```
 
 ## Screenshots
-images/expense.png
+![Sample Image](images/expense.png)
