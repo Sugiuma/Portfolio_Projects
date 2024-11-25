@@ -96,3 +96,4 @@ plt.show()
 ```
 
 ## Screenshots
+images/expense.png
