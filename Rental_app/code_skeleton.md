@@ -174,3 +174,8 @@ def main():
         else:
             print("Invalid choice, please try again.")
 ```
+
+## Key Differences and Benefits of OOP over Procedural Code:
+-- *Encapsulation: In the OOP version, tools and rental operations are encapsulated in classes. This means that changes to the tool rental process or inventory can be made within the class without affecting the rest of the code.
+Modularity and Reusability: Classes like ToolRental and Customer can be reused across different parts of the system or even in other systems, without duplicating code. For example, you can easily extend ToolRental to add new features, such as discounted rates or special rental plans.
+Easier Maintenance: In the OOP approach, each functionality (e.g., tool rental, tool return, displaying stock) is clearly organized into its respective class and method. This makes it easier to manage and extend in the future.
