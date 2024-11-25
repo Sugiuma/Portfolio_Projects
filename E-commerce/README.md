@@ -182,3 +182,5 @@ The application can be hosted on a live server (e.g., **Heroku**, **AWS**, or lo
    - Allow users to add products to a wishlist or save items for future purchase.
    - Notify users of price changes or availability for wishlist items.
 
+## Screenshots
+![Sample Image](images/ecommerce.jpg)
