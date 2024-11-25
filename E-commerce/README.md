@@ -184,3 +184,5 @@ The application can be hosted on a live server (e.g., **Heroku**, **AWS**, or lo
 
 ## Screenshots
 ![Sample Image](images/ecommerce.png)
+![Sample Image](images/admin_add.png)
+![Sample Image](images/admin_manage.png)
