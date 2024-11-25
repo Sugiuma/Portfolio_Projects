@@ -146,3 +146,4 @@ def update_activity_entries(*args):
 ```
 
 ### Screenshots
+![Sample Image](images/routine.png)
