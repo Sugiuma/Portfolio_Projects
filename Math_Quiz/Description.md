@@ -10,14 +10,9 @@ The Math Quiz Application is a Python-based educational program that generates r
 - **Final Quiz Completion Message**: Displays a congratulatory message when the quiz is complete.
 
 ## Screenshots
-### Initial Quiz Prompt
-![Initial Prompt](assets/images/initial_prompt.png)
-
 ### Problem Display and Answer Entry
-![Problem Display](assets/images/problem_display.png)
+![Problem Display](images/math.png)
 
-### Final Score Display
-![Final Score](assets/images/final_score.png)
 
 ## Code Structure
 - `MathQuizApp`: The main class for the application, responsible for generating problems, displaying the interface, handling answer checks, and updating scores.
