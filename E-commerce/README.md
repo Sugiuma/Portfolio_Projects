@@ -183,4 +183,4 @@ The application can be hosted on a live server (e.g., **Heroku**, **AWS**, or lo
    - Notify users of price changes or availability for wishlist items.
 
 ## Screenshots
-![Sample Image](images/ecommerce.jpg)
+![Sample Image](images/ecommerce.png)
