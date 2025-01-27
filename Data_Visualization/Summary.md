@@ -4,7 +4,7 @@ This project focuses on analyzing and visualizing wildfire activities in Austral
 
 ---
 
-#### **Part 1: Analyzing Wildfire Activities in Australia**  
+#### ** Analyzing Wildfire Activities in Australia**  
 The objective is to explore patterns and trends in wildfire activities using data visualization tools like Matplotlib, Seaborn, Pandas, and Folium.  
 
 **Tasks:**  
@@ -20,7 +20,7 @@ The objective is to explore patterns and trends in wildfire activities using dat
 
 ---
 
-#### **Part 2: Dashboard for Region and Year-Based Analysis**  
+#### ** Dashboard for Region and Year-Based Analysis**  
 The second part involves building an interactive dashboard using Dash and Plotly to visualize wildfire data based on user-selected regions and years.  
 
 **Features:**  
