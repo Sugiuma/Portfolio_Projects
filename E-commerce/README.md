@@ -1,7 +1,7 @@
 # E-Commerce Web Application
 
 ## Overview
-This project is a simple e-commerce web application built with Flask, SQLAlchemy, and Bootstrap, providing a responsive and dynamic user interface. It features an intuitive product catalog, secure user authentication, an interactive shopping cart, and an admin panel for managing products and orders.
+This project is a simple e-commerce web application built with Flask, SQLAlchemy, and Bootstrap, providing a responsive and dynamic user interface. It features an intuitive product catalog, secure user authentication, an interactive shopping cart, and an admin panel for managing products and orders. The app is test using Selenium Webdriver, unittest and pytest.
 
 ## Key Features & Flask Components
 
@@ -182,7 +182,35 @@ The application can be hosted on a live server (e.g., **Heroku**, **AWS**, or lo
    - Allow users to add products to a wishlist or save items for future purchase.
    - Notify users of price changes or availability for wishlist items.
 
+## **Summary of E-Commerce App Testing**  
+
+### **1. Testing Approach**  
+**Flask-based e-commerce application** was tested using:  
+- **Selenium WebDriver** – For UI and functional testing.  
+- **unittest & pytest** – For backend and API testing.  
+
+### **2. Selenium WebDriver Testing**  
+Used for **UI testing and user interactions**, including:  
+-  **Login & Authentication** – Verified user and admin logins.  
+-  **Product Catalog** – Checked product display and details page.  
+-  **Shopping Cart** – Ensured add-to-cart functionality works.  
+-  **Checkout Process** – Tested checkout page and order placement.  
+-  **Admin Panel** – Verified product addition, editing, and deletion.  
+
+### **3. Pytest & Unittest for Backend Testing**  
+-  **Database Operations** – Ensured `db.session.add()` and queries work within `app_context()`.  
+-  **Flask Routes & API Testing** – Verified responses from key routes.  
+-  **User Registration & Authentication** – Checked sign-up, login, and session management.  
+-  **Cart & Order Processing** – Ensured correct item addition and checkout flow.  
+
+### **4. Key Learnings & Next Steps**  
+🔹 **Improve Error Handling** – Add better validation messages in UI tests.  
+🔹 **Expand Test Coverage** – Include edge cases (e.g., invalid product quantity).  
+ 
+
 ## Screenshots
 ![Sample Image](images/ecommerce.png)
 ![Sample Image](images/admin_add.png)
 ![Sample Image](images/admin_manage.png)
+![Sample Image](images/unitest.png)
+![Sample Image](images/pytest.png)
