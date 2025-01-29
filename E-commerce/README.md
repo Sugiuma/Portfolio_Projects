@@ -203,14 +203,15 @@ Used for **UI testing and user interactions**, including:
 -  **User Registration & Authentication** – Checked sign-up, login, and session management.  
 -  **Cart & Order Processing** – Ensured correct item addition and checkout flow.  
 
-### **4. Key Learnings & Next Steps**  
+### **4. Next Steps**  
 🔹 **Improve Error Handling** – Add better validation messages in UI tests.  
 🔹 **Expand Test Coverage** – Include edge cases (e.g., invalid product quantity).  
- 
+
+ ![Sample Image](images/unittest.png)
+![Sample Image](images/pytest.png)
 
 ## Screenshots
 ![Sample Image](images/ecommerce.png)
 ![Sample Image](images/admin_add.png)
 ![Sample Image](images/admin_manage.png)
-![Sample Image](images/unitest.png)
-![Sample Image](images/pytest.png)
+
