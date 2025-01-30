@@ -1,7 +1,7 @@
 # E-Commerce Web Application
 
 ## Overview
-This project is a simple e-commerce web application built with Flask, SQLAlchemy, and Bootstrap, providing a responsive and dynamic user interface. It features an intuitive product catalog, secure user authentication, an interactive shopping cart, and an admin panel for managing products and orders. The app is test using Selenium Webdriver, unittest and pytest.
+This project is a simple e-commerce web application built with Flask, SQLAlchemy, and Bootstrap, providing a responsive and dynamic user interface. It features an intuitive product catalog, secure user authentication, an interactive shopping cart, and an admin panel for managing products and orders. The app is tested using Selenium Webdriver, unittest and pytest.
 
 ## Key Features & Flask Components
 
