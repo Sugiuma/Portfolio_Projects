@@ -11,13 +11,12 @@ This project is a simple e-commerce web application built with Flask, SQLAlchemy
 - Each product has an "Add to Cart" option, allowing customers to specify quantities and add products to their cart.
 
 ### User Authentication
-- Users can log in as either **admin** or **customer**, with different views and access permissions for each role.
+- Users can log in and shop.
 - User credentials are stored securely using password hashing (Werkzeug).
 - Flask sessions manage login states and user sessions.
 
 ### Admin Panel for Product Management
-- Admin users can add, edit, and delete products.
-- Admin-specific routes are protected with the `admin_required` decorator to restrict access.
+- Admin can add, edit, and delete products.
 - Admins can manage product details, including uploading product images and updating inventory.
 
 ### Shopping Cart Functionality
@@ -30,7 +29,7 @@ This project is a simple e-commerce web application built with Flask, SQLAlchemy
 - Users receive a confirmation message upon successful order submission.
 
 ### Product Image Upload
-- Admins can upload product images, which are saved to the server and associated with the respective products.
+- Admin can upload product images, which are saved to the server and associated with the respective products.
 - Images are served from the `/static/uploads/` folder and displayed alongside product details.
 
 ### Responsive Design
@@ -55,8 +54,6 @@ This project is a simple e-commerce web application built with Flask, SQLAlchemy
 - **Jinja2** for templating engine
 - **Werkzeug** for secure password handling
 - **Bootstrap** for frontend styling
-- **Flask-SQLAlchemy** for managing database models
-
 
 To provide an overview of key parts of the e-commerce application, here are a few essential code snippets that demonstrate critical features like product management, user authentication, shopping cart handling, and the admin dashboard.
 
@@ -207,11 +204,13 @@ Used for **UI testing and user interactions**, including:
 🔹 **Improve Error Handling** – Add better validation messages in UI tests.  
 🔹 **Expand Test Coverage** – Include edge cases (e.g., invalid product quantity).  
 
- ![Sample Image](images/unittest.png)
+![Sample Image](images/unittest.png)
 ![Sample Image](images/pytest.png)
 
 ## Screenshots
-![Sample Image](images/ecommerce.png)
-![Sample Image](images/admin_add.png)
-![Sample Image](images/admin_manage.png)
+![Sample Image](images/homepage.png)
+![Sample Image](images/add_product.png)
+![Sample Image](images/manage_product.png)
+![Sample Image](images/signup.png)
+![Sample Image](images/user.png)
 
